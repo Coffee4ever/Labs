@@ -2,14 +2,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T2A]{fontenc}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{fancyhdr}
 \usepackage{setspace}
-\usepackage{ntheorem}
 \newcommand{\RomanNumeralCaps}[1]
-    {\MakeUppercase{\romannumeral #1}} 
-\newtheorem{theorem}{\normalsizeТ{\footnotesize ЕОРЕМА}}
+{\MakeUppercase{\romannumeral #1}} 
+\newtheoremstyle{remboldstyle}
+{}{}{}{\parindent}{}{}{.5em}{{\thmname{#1 }}{\thmnumber{#2}}{\thmnote{ (#3)}}}
+\theoremstyle{remboldstyle} 
+\newtheorem{theorem}{\normalsizeТ{\scriptsize ЕОРЕМА}}
 \textwidth=118mm
-\theoremheaderfont{\normalfont\bfseries}
 \begin{document}
 \setcounter{page}{258}
 \pagestyle{fancy}
